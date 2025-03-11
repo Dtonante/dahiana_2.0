@@ -18,21 +18,22 @@
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
-            $('.sticky-top')
-                .addClass('shadow-sm')
-                .css({
-                    'top': '0px',
-                    'background-color': 'rgba(60, 57, 57, 0.9)' // Fondo negro sólido cuando baja
-                });
+            $('.navbar')
+                .addClass('sticky-scrolled') // Agrega la clase para el navbar cuando hace scroll
+                .removeClass('sticky-top-initial') // Elimina la clase de estado inicial
+                .css('top', '0px'); // Establece la posición cuando baja
         } else {
-            $('.sticky-top')
-                .removeClass('shadow-sm')
-                .css({
-                    'top': '-100px',
-                    'background-color': 'rgba(0, 0, 0, 0)' // Fondo semitransparente cuando está arriba
-                });
+            $('.navbar')
+                .removeClass('sticky-scrolled') // Elimina la clase cuando el navbar vuelve arriba
+                .addClass('sticky-top-initial') // Vuelve a la clase inicial
+                .css('top', '-100px'); // Establece la posición cuando está arriba
         }
     });
+
+    
+    
+    
+
     
     
     
