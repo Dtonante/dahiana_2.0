@@ -187,6 +187,12 @@
     background-color: rgba(60, 57, 57, 0.9) !important;  /* Fondo oscuro cuando baja */
 }
 
+/* Estilos para el navbar cuando se hace scroll */
+.sticky-scrolled .logo-scrolled h1 {
+    color: white !important;
+   
+}
+
 /* Estilos para los enlaces cuando el navbar se desplaza hacia abajo */
 .sticky-scrolled .navbar-nav .nav-link {
     color: white !important;  /* Texto blanco cuando baja */
