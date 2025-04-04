@@ -34,7 +34,7 @@
 
 .icon-colors {
     color: white;
-    background-color: #585858 !important;
+    background-color: #345678 !important;
 }
 
 
@@ -50,6 +50,10 @@
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
+}
+
+h1 {
+    color: #345678 !important;
 }
 
 
@@ -136,7 +140,7 @@
 }
 
 .navbar .navbar-nav .nav-link {
-    color: #585858;
+    color: #345678;
     font-weight: 500;
 }
 
@@ -153,7 +157,7 @@
 /* .navbar.sticky-top {
     top: -100px;
     transition: .5s;
-    color: #585858;
+    color: #345678;
 
 } */
 @media (min-width: 992px) {
@@ -178,30 +182,30 @@
 .text-logo{
     font-family: 'Great Vibes', cursive;
     font-size: 40px;
-    color: #404040;
+    color: #345678;
     margin-left: -30px !important;
 }
 
 /* Estilos para el navbar cuando se hace scroll */
 .sticky-scrolled {
-    background-color: rgba(60, 57, 57, 0.9) !important;  /* Fondo oscuro cuando baja */
+    background-color: rgba(255, 255, 255, 0.9) !important;  /* Fondo oscuro cuando baja */
 }
 
 /* Estilos para el navbar cuando se hace scroll */
 .sticky-scrolled .logo-scrolled h1 {
-    color: white !important;
+    color: #345678 !important;
    
 }
 
 /* Estilos para los enlaces cuando el navbar se desplaza hacia abajo */
 .sticky-scrolled .navbar-nav .nav-link {
-    color: white !important;  /* Texto blanco cuando baja */
+    color: #345678 !important;  /* Texto blanco cuando baja */
 }
 
 
 /* Estilos para el navbar cuando está en la parte superior */
 .sticky-top-initial .navbar-nav .nav-link {
-    color: #585858 !important;  /* Texto gris cuando está arriba */
+    color: #345678 !important;  /* Texto gris cuando está arriba */
     background-color: rgba(0, 0, 0, 0) !important;  /* Fondo transparente cuando está arriba */
 }
 
@@ -216,7 +220,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.75;
 }
 
 .header-carousel .owl-carousel-text {
@@ -263,8 +267,8 @@
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: #585858;
-    border-color: #585858;
+    background: #345678;
+    border-color: #345678;
 }
 
 .header-carousel .owl-dots {
@@ -307,8 +311,8 @@
 }
 
 .header-carousel .owl-dot.active {
-    background: #585858;
-    border-color: #585858;
+    background: #345678;
+    border-color: #345678;
 }
 
 .page-header {
@@ -339,6 +343,8 @@
 /*** Service ***/
 .service-item {
     transition: .5s;
+    position: relative;
+    padding: 10%;
 }
 
 .service-item {
@@ -347,6 +353,27 @@
     align-items: center;
     text-align: center;
 }
+
+
+.image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 3%;
+    box-shadow: 0 4px 20px #345678;
+
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+
+
+
 
 .service-item h4 {
     margin-top: 1rem; /* Espacio entre el título y el botón */
@@ -377,6 +404,20 @@
 
 .service-item:hover .btn {
     width: 140px;
+}
+
+.modal-servicio {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 1000;
 }
 
 
@@ -520,7 +561,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
-    background:  rgb(228, 174, 59);
+    background:  #345678;
     transform: scale(1);
 }
 
@@ -534,7 +575,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item img {
-    background: rgb(228, 174, 59) !important;
+    background: #345678 !important;
 } 
 
 .testimonial-carousel .owl-nav {
@@ -558,7 +599,7 @@
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
     position: relative;
-    color: rgb(228, 174, 59);
+    color: #345678;
     font-size: 45px;
     transition: .5s;
 }
@@ -658,3 +699,61 @@
     z-index: 9;
     /* Debajo del botón de WhatsApp */
 }
+
+
+.modal-servicio {
+    position: absolute;
+    display: none;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    z-index: 100;
+    width: 400px; /* Ajusta según el contenido */
+}
+
+.modal-flecha {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    transform: rotate(45deg);
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.modal-flecha.abajo {
+    top: -8px; /* Flecha arriba si el modal está abajo */
+}
+
+.modal-flecha.arriba {
+    bottom: -8px; /* Flecha abajo si el modal está arriba */
+}
+
+
+
+.modal-servicio.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-servicio h2 {
+    font-size: 20px;
+    color: #345678;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.modal-servicio p {
+    color: #4a4a4a;
+    margin: 0;
+    padding: 5px 15px 15px 15px;
+    font-weight: 400;
+}
+
+
